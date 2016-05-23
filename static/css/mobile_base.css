@@ -1,0 +1,81 @@
+header .mbblock .logo {
+  margin: 0 0.2rem;
+  height: 1.26rem;
+  position: relative;
+  font-size: 0.21rem;
+}
+header .mbblock .logo img {
+  height: 1.1rem;
+}
+header .mbblock .logo .text {
+  position: absolute;
+  left: 1.26rem;
+  top: 0.26rem;
+  width: 2.2rem;
+}
+header .mbblock .logo .text .tit {
+  font-size: 0.26rem;
+  line-height: 0.38rem;
+  color: #000000;
+}
+header .mbblock .logo .text .phone {
+  line-height: 0.34rem;
+  color: #888888;
+}
+header .mbblock .logo .language {
+  position: absolute;
+  right: 0%;
+  bottom: 0.26rem;
+}
+header .mbblock .logo .language a {
+  color: #000000;
+}
+header .mbblock .logo .language a.active {
+  color: #01bfcf;
+}
+header .mbblock .mbmenu {
+  height: 0.88rem;
+  font-size: 0.35rem;
+}
+header .mbblock .mbmenu p {
+  position: relative;
+  z-index: 9;
+  box-shadow: 0px 2px 12px #cccccc;
+}
+header .mbblock .mbmenu p a {
+  display: block;
+  line-height: 0.88rem;
+  padding: 0 0.2rem;
+  background: #ffffff;
+  color: #666666;
+}
+header .mbblock .mbmenu p a.active {
+  background: #05a4db;
+  color: #ffffff;
+}
+header .mbblock .mbmenu p[show="0"] a:nth-child(n + 2) {
+  display: none;
+}
+footer .mbblock .mobile_menu {
+  display: block;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0px 2px 12px #cccccc;
+  line-height: 1rem;
+  font-size: 0.28rem;
+  font-weight: 100;
+  background: #ffffff;
+  z-index: 9;
+}
+footer .mbblock .mobile_menu a {
+  color: #666666;
+  display: block;
+  float: left;
+  width: 25%;
+  text-align: center;
+}
+footer .mbblock .mobile_menu a.active {
+  background: #02bdce;
+  color: #ffffff;
+}

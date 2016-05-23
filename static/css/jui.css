@@ -1,0 +1,109 @@
+html {
+  height: 100%;
+  font-size: 100px;
+}
+.cb {
+  clear: both;
+}
+.flt {
+  float: left;
+}
+.frt {
+  float: right;
+}
+input {
+  outline: none;
+  border: none;
+}
+.tct {
+  text-align: center;
+}
+body,
+dl,
+p,
+table,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 12px;
+}
+.hide {
+  display: none;
+}
+body {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  font-size: 12px;
+  font-family: 'Microsoft YaHei', 'Lucida Grande', Arial, sans-serif;
+}
+a {
+  text-decoration: none;
+  color: #4a62af;
+  cursor: pointer;
+}
+a:hover {
+  color: #d50b0f;
+}
+img {
+  vertical-align: middle;
+  border: none;
+}
+nav p {
+  display: inline-block;
+}
+iframe {
+  border: none;
+}
+table {
+  border: 0;
+  margin: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+table td,
+table th {
+  padding: 0;
+}
+table td {
+  text-align: center;
+}
+.loading {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.close {
+  position: absolute;
+  right: 1px;
+  top: 1px;
+}
+*[jui-animate="hover1"] b {
+  position: absolute;
+  height: 0.025rem;
+  top: -0.12rem;
+  background: #02bdce;
+}
+.jui-box {
+  display: none;
+}
+.jui-box.active {
+  display: block;
+}
+.jui-only-show .jui-show {
+  display: none;
+}
+.jui-only-show.active .jui-show {
+  display: block;
+}

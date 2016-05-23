@@ -1,0 +1,41 @@
+@import 'pub.less';
+@basel : 26rem;
+@blue: #008FD3;
+content {
+	section {
+		&.list {
+			.mg-r(0,@basel);
+			dl {
+				dt {
+					.mgtr(32rem);.mgbr(24rem);.psr;//.hr(180rem);
+					.img {
+						.w(20%);.flt;
+						img {
+							.w;
+						}
+					}
+					.text {
+						.flt;.mgl(2%);.w(78%);
+						h3 {
+							.fsr(22rem);.fw(500);.c(@blue);.lhr(46rem);
+						}
+						p {
+							.fsr(13rem);.lhr(22rem);.c(#000);
+						}
+					}
+					.allText {
+						.c(#777);.fsr(13rem);.lhr(30rem);.mgtr(32rem);.mgbr(24rem);
+					}
+				}
+			}
+		}
+		&.doctor {
+			h2 {
+				.fsr(24rem);.lhr(56rem);.c(@blue);.tct;
+			}
+			.detail {
+				.mg-r(20rem,@basel);
+			}
+		}
+	}
+}

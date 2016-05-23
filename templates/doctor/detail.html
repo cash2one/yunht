@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% load mytags  %}
+{% block css %}<link rel="stylesheet" href="{% static 'css/success.css' %}" type="text/css" />{% endblock %}
+{% block content %}
+<section class="background">
+	<img src="{% static 'img/hospital/top.png'%}"/>
+</section>
+<section class="doctor">
+	<h2>
+		{{result.name}}
+	</h2>
+	<div class="detail">
+		{{result.text | safe}}
+	</div>
+</section>
+{% endblock %}

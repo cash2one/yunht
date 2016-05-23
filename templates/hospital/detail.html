@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% load mytags  %}
+{% block css %}<link rel="stylesheet" href="{% static 'css/success.css' %}" type="text/css" />{% endblock %}
+{% block content %}
+<section class="background">
+	<img src="{% static 'img/hospital/top.png'%}"/>
+</section>
+<section class="list">
+	<dl>
+	<dt>
+		<div class="img"><img src="{{hdetail.pic}}"></div>
+		<div class="text">
+			<h3>{{hdetail.name}}</h3>
+			<p>
+			{{hdetail.text | safe}}
+			</p>
+		</div>
+		<br class="cb"/>
+	</dt>
+	</dl>
+	医生简介
+	<dl>
+	{%for r in resultList%}
+		<dt><a target="_blank" href="/doctor/{{r.pk}}">
+			<div class="img"><img src="{{r.pic}}"></div>
+			<div class="text">
+				<h3>{{r.name}}</h3>
+				<p>
+				{{r.text | safe}}
+				</p>
+			</div>
+			<br class="cb"/>
+		</a></dt>
+	{%endfor%}
+	</dl>
+</section>
+{% endblock %}

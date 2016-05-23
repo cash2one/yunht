@@ -1,0 +1,133 @@
+content .mbblock dl.server {
+  border-top: 1px solid #e9e9e9;
+  border-bottom: 1px solid #e9e9e9;
+  height: 1.5rem;
+  width: 100%;
+  margin: 0;
+}
+content .mbblock dl.server dt {
+  float: left;
+  width: 47%;
+  margin-left: 3%;
+  line-height: 0.75rem;
+  height: 0.75rem;
+  cursor: pointer;
+}
+content .mbblock dl.server dt img {
+  height: 0.6rem;
+}
+content .mbblock dl.server dt.active {
+  color: #01bccf;
+}
+content .mbblock .box {
+  width: 6rem;
+  padding: 0.16rem 0.2rem;
+  margin: 0;
+}
+content .mbblock .box h2 {
+  font-weight: 100;
+  color: #333333;
+  text-align: center;
+  font-size: 0.27rem;
+}
+content .mbblock .box .abstr {
+  color: #666666;
+  font-size: 0.19rem;
+  line-height: 0.38rem;
+  margin-top: 0.06rem;
+  margin-bottom: 0.02rem;
+  font-weight: 400;
+}
+content .mbblock .box .video img {
+  width: 100%;
+}
+content .mbblock nav.advantage {
+  color: #01bccf;
+  margin: 0.1rem 0.2rem;
+}
+content .mbblock nav.advantage p {
+  width: 49%;
+  margin-bottom: 2%;
+  float: left;
+  background: #01bccf;
+  color: #ffffff;
+  padding-top: 0.3rem;
+  line-height: 0.48rem;
+  height: 1.54rem;
+  text-align: center;
+}
+content .mbblock nav.advantage p.line {
+  margin-left: 2%;
+}
+content .mbblock nav.advantage p b {
+  font-size: 0.28rem;
+  color: #fcfe00;
+  position: relative;
+  top: 0.04rem;
+}
+content .mbblock dl.journey {
+  margin: 0.1rem 0.2rem;
+}
+content .mbblock dl.journey dt img {
+  width: 1.6rem;
+  float: left;
+}
+content .mbblock dl.journey dt .text {
+  width: 4.16rem;
+  float: left;
+  margin-left: 0.2rem;
+}
+content .mbblock dl.journey dt .text p {
+  line-height: 0.3rem;
+  font-size: 0.18rem;
+  color: #666666;
+  font-weight: 100;
+}
+content .mbblock .news {
+  margin: 0.2rem 0.2rem;
+}
+content .mbblock .news h3 {
+  font-size: 0.28rem;
+  font-weight: 900;
+}
+content .mbblock .news h3 a {
+  color: #000000;
+  display: inline-block;
+  line-height: 0.52rem;
+  border-bottom: 0.02rem solid #02bdce;
+}
+content .mbblock .news dl dt {
+  margin-top: 0.18rem;
+  height: 0.96rem;
+}
+content .mbblock .news dl dt img {
+  float: left;
+  width: 1.66rem;
+  height: 100%;
+}
+content .mbblock .news dl dt .text {
+  float: left;
+  width: 4.1rem;
+  margin-left: 0.2rem;
+  line-height: 0.3rem;
+  height: 100%;
+  word-wrap: break-word;
+  overflow: hidden;
+  color: #666666;
+}
+content .mbblock .start {
+  line-height: 0.46rem;
+  margin-bottom: 0.1rem;
+  margin-top: 0.1rem;
+  font-size: 0.16rem;
+}
+content .mbblock .start a {
+  display: inline-block;
+  width: 1.74rem;
+  background: #02bdce;
+  color: #ffffff;
+  text-align: center;
+}
+content .mbblock .bottonBox {
+  height: 1rem;
+}

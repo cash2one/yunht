@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% load mytags  %}
+{% block css %}<link rel="stylesheet" href="{% static 'css/project.css' %}" type="text/css" />{% endblock %}
+{% block menu %}
+<!--<nav class="project">
+	<a href="/project/ttp"{%ifequal active "project/ttp"%} class="active"{%endifequal%}>海外试管婴儿项目</a>
+	<a href="/project/fp"{%ifequal active "project/fp"%} class="active"{%endifequal%}>海外生育保存</a>
+	<a href="/project/laboratory"{%ifequal active "project/laboratory"%} class="active"{%endifequal%}>海外生育实验室</a>
+</nav>-->
+{% endblock %}
+{% block content %}
+<section class="background">
+	<img src="{% static 'img/project/top.jpg'%}"/>
+</section>
+<section class="project">
+	<dl>
+		<dt class="one">
+			<img src="{% static 'img/project/ttp.jpg'%}">
+			<div class="text">
+				<h3>海外试管婴儿</h3>
+				<p>
+				云荷廷生育医疗云荷廷生育医疗云荷廷生育医疗云荷廷生育医疗云荷廷生育医疗云荷廷生育医疗云荷
+				廷生育医疗云荷廷生育医疗云荷廷生育医疗廷生育医疗云荷廷生育医疗云荷廷生育医疗廷生育医疗云
+				廷生育医疗云荷廷生育医疗云荷廷生育医疗廷生育医疗云荷廷生育医疗云荷廷生育医疗廷生育医疗。
+				</p>
+				<div class="more"><a target="_blank" href="/project/ttp">了解更多</a></div>
+			</div>
+		</dt>
+		<dt class="two">
+			<img src="{% static 'img/project/fp.jpg'%}">
+			<div class="text">
+				<h3>海外生育保存</h3>
+				<p>
+				云荷廷生育医疗云荷廷生育医疗云荷廷生育医疗云荷廷生育医疗云荷廷生育医疗云荷廷生育医疗云荷
+				廷生育医疗云荷廷生育医疗云荷廷生育医疗廷生育医疗云荷廷生育医疗云荷廷生育医疗廷生育医疗云
+				廷生育医疗云荷廷生育医疗云荷廷生育医疗廷生育医疗云荷廷生育医疗云荷廷生育医疗廷生育医疗。
+				</p>
+				<div class="more"><a target="_blank" href="/project/fp">了解更多</a></div>
+			</div>
+		</dt>
+		<dt class="one">
+			<img src="{% static 'img/project/laboratory.png'%}">
+			<div class="text">
+				<h3>海外生育保存</h3>
+				<p>
+				云荷廷生育医疗云荷廷生育医疗云荷廷生育医疗云荷廷生育医疗云荷廷生育医疗云荷廷生育医疗云荷
+				廷生育医疗云荷廷生育医疗云荷廷生育医疗廷生育医疗云荷廷生育医疗云荷廷生育医疗廷生育医疗云
+				廷生育医疗云荷廷生育医疗云荷廷生育医疗廷生育医疗云荷廷生育医疗云荷廷生育医疗廷生育医疗。
+				</p>
+				<div class="more"><a target="_blank" href="/project/laboratory">了解更多</a></div>
+			</div>
+		</dt>
+	</dl>
+</section>
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends 'project.html' %}
+{% load staticfiles %}
+{% load mytags  %}
+{% block css %}<link rel="stylesheet" href="{% static 'css/project.css' %}" type="text/css" />{% endblock %}
+{% block content %}
+<section class="background">
+	<img src="{% static 'img/project/ttp/top.jpg'%}"/>
+</section>
+<section class="project-fp">
+	<div class="menu-left flt">
+		<dl jui-click="active" jui-tar="dt">
+			<dt class="active">海外试管项目介绍</dt>
+			<dt>第三代试管技术介绍</dt>
+			<dt>异性恋夫妇生育指南</dt>
+		</dl>
+	</div>
+	<div class="content-right frt">
+		<p>
+		了解暖子冷冻了解暖子冷冻了解暖子冷冻了解暖子冷冻了解暖子冷冻了解暖子冷冻了解暖子冷冻了解暖子冷冻了解暖子冷冻了解暖子冷冻了解暖子冷冻了解暖子冷冻
+		了解暖子冷冻了解暖子冷冻了解暖子冷冻了解暖子冷冻了解暖子冷冻了解暖子冷冻了解暖子冷冻了解暖子冷冻了解暖子冷冻了解暖子冷冻了解暖子冷冻了解暖子冷冻
+		</p>
+		<div class="yht-button"><a>点击进入“第三代试管技术介绍”</a></div>
+	</div>
+	<br class="cb"/>
+</section>
+{% endblock %}

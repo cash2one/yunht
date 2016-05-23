@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% load mytags  %}
+{% block css %}<link rel="stylesheet" href="{% static 'css/contact.css' %}" type="text/css" />{% endblock %}
+{% block content %}
+<section class="background">
+	<img src="{% static 'img/about/top.jpg'%}"/>
+</section>
+<section class="about">
+	<div class="abstr">
+		<h2>公司简介</h2>
+		<p>由于污染、生活工作压力、婚育年龄推迟等综合原因，中国的育龄不孕不育人群数量逐渐增高，不孕不育率接近发达国家水平8%－15%，同时，中国的单身、同性爱伴侣、HIV感染者、癌症患者由于政策和技术限制在中国生育受阻，越来越多的人将眼光放向国外。在这样的趋势中，云荷廷健康管理成立了。
+		</p>
+		<p>我们与多个国家优秀的辅助生殖机构紧密合作，将先进的海外生育理念和技术信息传播给大众。</p>
+		<p>我们将怀着责任心、爱心、耐心、同理心，为您提供专业、细致、准确的海外生育医疗咨询建议和辅助配套服务。我们将尽最大努力，使您的海外生育之路顺畅、愉快！</p>
+	</div>
+	<dl>
+		<dt>
+			<div class="tit">中国地址</div>
+			<div class="text">
+				<p>地址：中国杭州世纪大道168号八方杰座大厦1幢303</p>
+				<p>电话：400-000-1311</p>
+				<p>邮箱：info@lotusivf.com</p>
+			</div>
+			<a class="img" href="http://map.baidu.com/?newmap=1&ie=utf-8&s=s%26wd%3D%E5%85%AB%E6%96%B9%E6%9D%B0%E5%BA%A7%E5%A4%A7%E5%8E%A6" target="_blank"><img src="{% static 'img/about/china.png'%}"/></a>
+			<br class="cb"/>
+		</dt>
+		<dt>
+			<div class="tit">美国地址</div>
+			<div class="text">
+				<p>地址：9472-4 compass point drive, San Diego,CA92126</p>
+				<!--<p>电话：</p>
+				<p>邮箱：</p>-->
+			</div>
+			<a class="img" href="http://map.baidu.com/?newmap=1&ie=utf-8&s=s%26wd%3D%E5%85%AB%E6%96%B9%E6%9D%B0%E5%BA%A7%E5%A4%A7%E5%8E%A6" target="_blank"><img src="{% static 'img/about/china.png'%}"/></a>
+			<br class="cb"/>
+		</dt>
+		<dt>
+			<div class="tit">泰国地址</div>
+			<div class="text">
+				<p>地址：1858/29－30，8th Fl. Interlink Tower, Bangna-Trad Rd.,Bangna,Bangkok,Thailand 10260</p>
+				<!--<p>电话：</p>
+				<p>邮箱：</p>-->
+			</div>
+			<a class="img" href="http://map.baidu.com/?newmap=1&ie=utf-8&s=s%26wd%3D%E5%85%AB%E6%96%B9%E6%9D%B0%E5%BA%A7%E5%A4%A7%E5%8E%A6" target="_blank"><img src="{% static 'img/about/china.png'%}"/></a>
+			<br class="cb"/>
+		</dt>
+	</dl>
+</section>
+{% endblock %}

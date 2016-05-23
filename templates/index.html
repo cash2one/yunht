@@ -1,0 +1,355 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% load mytags  %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/index.css' %}" type="text/css" />
+<link rel="stylesheet" type="text/css" href="{% static 'css/mobile_index.css' %}"  media="screen and (max-width: 1003px)">
+{% endblock %}
+{% block js %}
+<script>
+var _isSHow = 0;
+$('.animateText .showHide').each(function(k,i){
+	var o = $(i),
+		h3 = o.find('h3'),
+		cnt = o.find('.cnt'),
+		cnth = cnt[0].clientHeight,
+		start = o.find('.start')
+	;
+	h3.css({'top':h3.attr('t')+'rem','text-align':'center'});
+	cnt.attr('h',cnth).css({height:'1px',top:cnth+'px'});
+	start.css({height:'0.04rem',top:start.attr('t')+'rem'});
+})
+$('.animateText').hover(function(){
+	var o = $(this),
+		h3 = o.find('h3'),
+		cnt = o.find('.cnt'),
+		cnth = cnt.attr('h'),
+		start = o.find('.start'),
+		is = parseInt(o.attr('is'))
+	;
+	log(is);
+	if(is==0){
+		o.attr('is',1);
+		h3.animate({'top':'0rem','text-align':'center'},100,function(){
+			cnt.animate({height:cnth+'px',top:'-='+cnth+'px'},200,function(){
+				o.attr('is',0);
+			})
+			start.animate({height:'0.46rem',top:'0rem'},300)
+		})
+	}
+},function(){
+	var o = $(this),
+		h3 = o.find('h3'),
+		cnt = o.find('.cnt'),
+		cnth = cnt.attr('h'),
+		start = o.find('.start')
+		is = parseInt(o.attr('is'))
+	;
+	start.animate({height:'0.04rem',top:start.attr('t')+'rem'},100,function(){
+		cnt.animate({height:'1px',top:cnth+'px'},60,function(){
+			
+		})
+		h3.animate({'top':h3.attr('t')+'rem','text-align':'center'},30)
+	})
+})
+
+$('.tb2 p b').css({'font-size':'0.16rem'}).animate({'font-size':'0.28rem'},3000);
+</script>
+{% endblock %}
+{% block content %}
+<section class="background">
+	<div class="covers"><span>We believe everyone is entitled to a complete family.</span></div>
+	<img src="{% static 'img/fee/top.jpg'%}"/>
+	<!--<video autoplay="" loop="" muted="" poster="https://www.conceiveabilities.com/content/hero-ice-cream-poster.jpg">
+		<source src="https://www.conceiveabilities.com/content/hero-ice-cream.webm" type="video/webm">
+		<source src="https://www.conceiveabilities.com/content/hero-ice-cream.ogv" type="video/ogv">
+		<source src="https://www.conceiveabilities.com/content/hero-ice-cream.mp4" type="video/mp4">
+	</video>
+	<video autoplay="" loop="" muted="" poster="{% static 'video/top.png'%}">
+		<source src="{% static 'video/top.mp4'%}"  type="video/mp4">
+	</video>-->
+</section>
+<div class="pcblock">
+	<section class="tb1">
+		<dl jui-click="change-box" jui-tar="dt" jui-to="jui-box1">
+			<dt i="0" class="active"><img src="{% static 'img/index/tb1-1.png'%}"/> 海外试管婴儿服务指南</dt>
+			<dt i="1"><img src="{% static 'img/index/tb1-2.png'%}"/> 生育保存服务指南</dt>
+			<dt i="2"><img src="{% static 'img/index/tb1-3.png'%}"/> 试管婴儿费用</dt>
+			<dt i="3"><img src="{% static 'img/index/tb1-4.png'%}"/> 试管婴儿成功率</dt>
+		</dl>
+		<div class="box jui-box jui-box1 active" i="0">
+			<h2>海外试管婴儿服务指南</h2>
+			<div class="abstr">云荷廷生育医疗为那些有特殊需求的客户提供定制的海外试管婴儿服务，我们的服务范围涵盖美国、泰国、柬埔寨等国家。您可以在目的地国法律法规允许的情况下，自由选择胚胎的性别、自由定制双胞胎、龙凤胎；同时，对于携带有单基因遗传病基因的客户，我们提供胚胎植入前遗传学筛查技术，帮助客户选择不带有致病基因的胚胎进行移植，从根源做到优生优育。</div>
+			<!--<nav jui-click="change-box" jui-tar="p" jui-to="jui-box2">
+				<p class="active" i="0">云荷廷简介</p><p i="1">服务项目</p><p i="2">成功率</p><p i="3">试管过程</p>
+			</nav>-->
+			<div class="video">
+				<img src="{% static 'img/index/s/s1.jpg'%}"/>
+				<!--<video class="jui-box jui-box2 active" i="0" autoplay="" loop="" muted="" poster="{% static 'img/loading.jpg'%}">
+					<source src="{% static 'video/p1/1.mp4'%}" type="video/mp4">
+				</video>-->
+			</div>
+		</div>
+		
+		<div class="box jui-box jui-box1" i="1">
+			<h2> 生育保存服务指南</h2>
+			<div class="abstr">云荷廷海外医院实验室为您开设精子冷冻服务、卵子冷冻及胚胎冷冻服务。精子、卵子冷冻可以为癌症及肿瘤等需要接受放射性治疗的患者保留生育能力，患者可以在治疗前将精子或卵子冷冻保存以备以后生育之需，卵子冷冻也适合暂时不想要孩子为以后生育做准备的女士，胚胎冷冻主要是适合移植后有多余胚胎或者子宫环境暂不适合移植先将胚胎保存以供下次移植。</div>
+			<div class="video">
+				<img src="{% static 'img/index/s/s2.jpg'%}"/>
+			</div>
+		</div>
+		
+		<div class="box jui-box jui-box1" i="2">
+			<h2>  试管婴儿费用</h2>
+			<div class="abstr">我们将为您提供最优惠的价格，让您享受最周到的服务。我们承诺：所有收费项目透明，无任何隐性收费项目，我们的套餐包含翻译吃住套餐、医疗套餐等，您可以根据个人所需选择相应的服务，详情请联系我们的咨询顾问。</div>
+			<div class="video">
+				<img src="{% static 'img/index/s/s3.jpg'%}"/>
+			</div>
+		</div>
+		
+		<div class="box jui-box jui-box1" i="3">
+			<h2>  试管婴儿成功率</h2>
+			<div class="abstr">试管婴儿技术治疗成功率一般用临床妊娠率进行判定，即临床妊娠周期占胚胎移植周期的比例，而临床妊娠是指胚胎移植后28～30天阴道超声观察到宫腔内妊娠囊。我们拥有最先进的实验室，最专业的专家团队，累计行业经验超过20年，成功率更是高达82%。</div>
+			<div class="video">
+				<img src="{% static 'img/index/s/s4.jpg'%}"/>
+			</div>
+		</div>
+		
+	</section>
+	<br class="cb"/>
+	<section class="tb2">
+		<nav>
+			<p>累计行业经验超过<br/><b>20年</b></p>
+			<p class="line line2">核心团队累计服务过<br/><b>12</b>个国家的客户</p>
+			<p class="line">核心团队累计帮助<br/>超过<b>700</b>个家庭</p>
+			<p class="line line2">成功率高达<br/><b>82%</b</p>
+			<br class="cb"/>
+		</nav>
+		<div class="tips hide">
+			<p class="tit"><span>获得最新资讯</span></p>
+			<p class="msg">我们帮助不同的人群组建幸福家庭，现在就写邮件给我们，获得最新服务资讯</p>
+			<p class="submit">
+				<input class="txt" placeholder="请在此输入您的姓名、邮件和（或）电话及需要咨询的问题，我们会第一时间解答" type="text"/><input class="smt" type="button" value="Submit"/>
+			</p>
+		</div>
+	</section>
+	<section class="tb3 half">
+		<div class="flt imgs">
+			<img src="{% static 'img/index/tb3-1.jpg'%}">
+		</div>
+		<div class="flt animateText" is="0">
+			<div class="cover txt"></div>
+			<img class="cover img" src="{% static 'img/index/tb3-1.jpg'%}">
+			<div class="text showHide">
+				<h3 t="1.1">云荷廷生育医疗</h3>
+				<div class="cnt">
+					<p>专注提供海外服务生殖解决方案</p>
+					<p>业务范围涵盖多个国家</p>
+					<p>美国试管婴儿、泰国试管婴儿、柬埔寨试管婴儿</p>
+				</div>
+				<p t="0.8" class="start">
+					<a href="/start/" target="_blank"><input type="button" value="开始旅程"/></a>
+				</p>
+			</div>
+		</div>
+		<br class="cb"/>
+	</section>
+	<section class="tb4 half">
+		<div class="flt animateText" is="0">
+			<div class="cover txt"></div>
+			<img class="cover img" src="{% static 'img/index/tb4-1.jpg'%}">
+			<div class="text showHide">
+				<h3 t="1.1">服务群体</h3>
+				<div class="cnt">
+				<p>专注云荷廷生育医疗</p>
+				<p>同性恋及异性恋夫妇、单身人士、需要保存生育能力的人士、艾滋病患者、不适宜生育的特殊人群。</p>
+				<p>云荷廷生育医疗愿为所有有需要的人士服务，不论你的种族、肤色、性取向</p>
+				</div>
+				<p t="0.8" class="start">
+					<a href="/start/" target="_blank"><input type="button" value="开始旅程"/></a>
+				</p>
+			</div>
+		</div>
+		<div class="flt imgs">
+			<img src="{% static 'img/index/tb4-1.jpg'%}">
+		</div>
+		<br class="cb"/>
+	</section>
+	<section class="tb5 half">
+		<div class="flt imgs">
+			<img src="{% static 'img/index/tb5-1.jpg'%}">
+		</div>
+		<div class="flt animateText" is="0">
+			<div class="cover txt"></div>
+			<img class="cover img" src="{% static 'img/index/tb5-1.jpg'%}">
+			<div class="text showHide">
+				<h3 t="1.1">PGS/PGD筛选技术</h3>
+				<div class="cnt">
+					<p>第三代PGD试管婴儿，采用PGS、CCS相结合的基因技术。</p>
+					<p>全面筛选：</p>
+					<p>24对染色体全面筛选，130+疾病全方位检查，保障宝宝的健康！</p>
+				</div>
+				<p t="0.8" class="start">
+					<a href="/start/" target="_blank"><input type="button" value="开始旅程"/></a>
+				</p>
+			</div>
+		</div>
+		<br class="cb"/>
+	</section>
+	<section class="tb6 half">
+		<div class="flt">
+			<h3><a>新闻</a></h3>
+			<dl>
+				{%for n in newsList%}
+				<a href="/news/{{n.pk}}" target="_blank"><dt>
+					<div class="img"><img src="{{n.pic}}" onerror="this.src='/static/img/index/tb6-1.jpg'"></div>
+					<div class="text">
+						{{n.abs}}
+					</div>
+				</dt></a>
+				{%endfor%}
+			<dl>
+			<p class="start">
+				<a href="/news/" target="_blank"><input type="button" value="阅读所有的新闻"/></a>
+			</p>
+		</div>
+		<div class="flt">
+			<h3><a>患者课堂</a></h3>
+			<dl>
+				{%for n in classList%}
+				<a href="/knowledge/{{n.pk}}" target="_blank"><dt>
+					<div class="img"><img src="{{n.pic}}" onerror="this.src='/static/img/index/tb6-2.jpg'"></div>
+					<div class="text">
+						{{n.abs}}
+					</div>
+				</dt></a>
+				{%endfor%}
+			<dl>
+			<p class="start">
+				<a href="/knowledge/" target="_blank"><input type="button" value="观看所有的课程"/></a>
+			</p>
+		</div>
+		<br class="cb"/>
+	</section>
+</div>
+<div class="mbblock">
+	<dl class="server" jui-click="change-box" jui-tar="dt" jui-to="jui-box1">
+		<dt i="0" class="active"><img src="{% static 'img/index/tb1-1.png'%}"/> 海外试管婴儿服务指南</dt>
+		<dt i="1"><img src="{% static 'img/index/tb1-2.png'%}"/> 生育保存服务指南</dt>
+		<dt i="2"><img src="{% static 'img/index/tb1-3.png'%}"/> 试管婴儿费用</dt>
+		<dt i="3"><img src="{% static 'img/index/tb1-4.png'%}"/> 试管婴儿成功率</dt>
+		<br class="cb"/>
+	</dl>
+	<div class="box jui-box jui-box1 active" i="0">
+		<h2>海外试管婴儿服务指南</h2>
+		<div class="abstr">云荷廷生育医疗为那些有特殊需求的客户提供定制的海外试管婴儿服务，我们的服务范围涵盖美国、泰国、柬埔寨等国家。您可以在目的地国法律法规允许的情况下，自由选择胚胎的性别、自由定制双胞胎、龙凤胎；同时，对于携带有单基因遗传病基因的客户，我们提供胚胎植入前遗传学筛查技术，帮助客户选择不带有致病基因的胚胎进行移植，从根源做到优生优育。</div>
+		<div class="video">
+			<img src="{% static 'img/index/s/s1.jpg'%}"/>
+		</div>
+	</div>
+	<div class="box jui-box jui-box1" i="1">
+		<h2> 生育保存服务指南</h2>
+		<div class="abstr">云荷廷海外医院实验室为您开设精子冷冻服务、卵子冷冻及胚胎冷冻服务。精子、卵子冷冻可以为癌症及肿瘤等需要接受放射性治疗的患者保留生育能力，患者可以在治疗前将精子或卵子冷冻保存以备以后生育之需，卵子冷冻也适合暂时不想要孩子为以后生育做准备的女士，胚胎冷冻主要是适合移植后有多余胚胎或者子宫环境暂不适合移植先将胚胎保存以供下次移植。</div>
+		<div class="video">
+			<img src="{% static 'img/index/s/s2.jpg'%}"/>
+		</div>
+	</div>
+	<div class="box jui-box jui-box1" i="2">
+		<h2>  试管婴儿费用</h2>
+		<div class="abstr">我们将为客户提供最优惠的价格，让客户享受最周到的服务。我们承诺：不成功不收费。我们的包成功试管婴儿套餐周期包括三次促排取卵，三次鲜胚移植，和全部的冻胚移植。如果经过以上治疗，仍然未能如愿以偿，我们将全款退款。</div>
+		<div class="video">
+			<img src="{% static 'img/index/s/s3.jpg'%}"/>
+		</div>
+	</div>
+	<div class="box jui-box jui-box1" i="3">
+		<h2>  试管婴儿成功率</h2>
+		<div class="abstr">试管婴儿技术治疗成功率一般用临床妊娠率进行判定，即临床妊娠周期占胚胎移植周期的比例，而临床妊娠是指胚胎移植后28～30天阴道超声观察到宫腔内妊娠囊。我们拥有最先进的实验室，最专业的专家团队，累计行业经验超过20年，成功率更是高达82%。</div>
+		<div class="video">
+			<img src="{% static 'img/index/s/s4.jpg'%}"/>
+		</div>
+	</div>
+	<nav class="advantage">
+		<p>累计行业经验超过<br/><b>20年</b></p>
+		<p class="line">核心团队累计服务过<br/><b>12</b>个国家的客户</p>
+		<p>核心团队累计帮助<br/>超过<b>700</b>个家庭</p>
+		<p class="line">成功率高达<br/><b>82%</b></p>
+		<br class="cb"/>
+	</nav>
+	<dl class="journey">
+		<dt>
+			<img src="{% static 'img/index/tb3-1.jpg'%}">
+			<div class="text">
+				<h3>云荷廷生育医疗</h3>
+				<p>专注提供海外服务生殖解决方案</p>
+				<p>业务范围涵盖多个国家</p>
+				<p>美国试管婴儿、泰国试管婴儿、柬埔寨试管婴儿</p>
+				<div class="start">
+					<a>开始旅程</a>
+				</div>
+			</div>
+			<br class="cb"/>
+		</dt>
+		<dt>
+			<img src="{% static 'img/index/tb4-1.jpg'%}">
+			<div class="text">
+				<h3>服务群体</h3>
+				<p>专注云荷廷生育医疗</p>
+				<p>同性恋及异性恋夫妇、单身人士、需要保存生育能力的人士、艾滋病患者、不适宜生育的特殊人群。</p>
+				<p>云荷廷生育医疗愿为所有有需要的人士服务，不论你的种族、肤色、性取向</p>
+				<div class="start">
+					<a>开始旅程</a>
+				</div>
+			</div>
+			<br class="cb"/>
+		</dt>
+		<dt>
+			<img src="{% static 'img/index/tb5-1.jpg'%}">
+			<div class="text">
+				<h3>PGS/PGD筛选技术</h3>
+				<p>第三代PGD试管婴儿，采用PGS、CCS相结合的基因技术。</p>
+				<p>全面筛选：</p>
+				<p>24对染色体全面筛选，130+疾病全方位检查，保障宝宝的健康！</p>
+				<div class="start">
+					<a>开始旅程</a>
+				</div>
+			</div>
+			<br class="cb"/>
+		</dt>
+	</dl>
+	<div class="news">
+		<h3><a>新闻</a></h3>
+		<dl>
+			{%for n in newsList%}
+			<dt>
+				<div class="img"><img src="{{n.pic}}" onerror="this.src='/static/img/index/tb6-1.jpg'"></div>
+				<div class="text">
+					{{n.abs}}
+				</div>
+				<br class="cb"/>
+			</dt>
+			{%endfor%}
+		</dl>
+		<div class="start">
+			<a>阅读所有的新闻</a>
+		</div>
+	</div>
+	<div class="news">
+		<h3><a>患者课堂</a></h3>
+		<dl>
+			{%for n in classList%}
+			<dt>
+				<div class="img"><img src="{{n.pic}}" onerror="this.src='/static/img/index/tb6-2.jpg'"></div>
+				<div class="text">
+					{{n.abs}}
+				</div>
+				<br class="cb"/>
+			</dt>
+			{%endfor%}
+		</dl>
+		<div class="start">
+			<a>观看所有的课程</a>
+		</div>
+	</div>
+	<div class="bottonBox"></div>
+</div>
+{% endblock %}

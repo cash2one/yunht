@@ -1,0 +1,100 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% load mytags  %}
+{% block css %}<link rel="stylesheet" href="{% static 'css/start.css' %}" type="text/css" />{% endblock %}
+{% block js %}
+<script src="{% static 'jui-admin/js/My97DatePicker/WdatePicker.js' %}"></script>
+<script>
+var _get = function(dft){
+		var dft = dft || Jui.tools.time.getStrTime({con:['年','月','日','','','']}),
+			toFormat = function(d){
+				var s = d.split('-');
+				return s[0]+'年'+s[1]+'月'+s[2]+'日';
+			},
+			dft_m = dft.replace('年','/').replace('月','/').replace('日','');
+		$('.timecs').text(dft);
+		$('.time2').text(toFormat(Jui.tools.time.str_add_date(dft_m,1)));
+		$('.time3').text(toFormat(Jui.tools.time.str_add_date(dft_m,2)));
+		$('.time4').text(toFormat(Jui.tools.time.str_add_date(dft_m,9)));
+		$('.time5').text(toFormat(Jui.tools.time.str_add_date(dft_m,12)));
+		$('.time6').text(toFormat(Jui.tools.time.str_add_date(dft_m,14)));
+		$('.time7').text(toFormat(Jui.tools.time.str_add_date(dft_m,23)));
+	},
+	pickedFunc = function(){
+		_get($('.timecs').text());
+	}
+;
+_get();
+</script>
+{% endblock %}
+{% block content %}
+<section class="background">
+	<img src="{% static 'img/start/top.jpg'%}"/>
+</section>
+<section class="start">
+	<div class="start-table">
+		<div class="print-title">
+			<a onclick="printdiv('div_print');">打印</a>
+		</div>
+		<div id="div_print" class="print-content">
+			<div class="message">
+				要查看您的进度表，请点击以下的日历选择您月经周期的第一天。
+			</div>
+			<dl class="list">
+				<dt class="one">
+					<div class="number"><span>第.天 <br/>1</span></div>
+					<div class="datas">
+						<h3>月经周期的开始：飞赴国外</h3>
+						<p><span class="text timecs" onclick="WdatePicker({dateFmt:'yyyy年MM月dd日',onpicked: pickedFunc })">...</span><a><img src="{% static 'img/start/choice.png'%}"/></a></p>
+					</div>
+				</dt><br class="cb"/>
+				<dt>
+					<div class="number"><span>第.天 <br/>2</span></div>
+					<div class="datas">
+						<h2 class="time2">...</h2>
+						<p>第2天，身体检查。体检报告结果约需半天，专家评估并制定方案。</p>
+					</div>
+				</dt><br class="cb"/>
+				<dt>
+					<div class="number"><span>第.天 <br/>3</span></div>
+					<div class="datas">
+						<h2 class="time3">...</h2>
+						<p>第4天，开始促排， 月经第3-9天开始促排卵。大概打6-10天，每天1针。约打针的第4天开始，加打防止卵子脱落的针。在打针期间，医生会约见2-4次，B超检查卵泡发育情况，在确定卵子成熟后，注射破卵针HCG（夜针），让卵子完全成熟，并且脱落，为取卵做准备。</p>
+					</div>
+				</dt><br class="cb"/>
+				<dt>
+					<div class="number"><span>第.天 <br/>10</span></div>
+					<div class="datas">
+						<h2 class="time4">...</h2>
+						<p>第10天，月经第10-12天取卵。打HCG（夜针或破卵针）后的36小时内完成取卵，取卵彩经阴道超声介导下取卵。</p>
+					</div>
+				</dt><br class="cb"/>
+				<dt>
+					<div class="number"><span>第.天 <br/>13</span></div>
+					<div class="datas">
+						<h2 class="time5">...</h2>
+						<p>第13天，月经第13-16天胚胎培育。最终受精报告及胚胎筛选（胚胎质量、等级及性别）。</p>
+					</div>
+				</dt><br class="cb"/>
+				<dt>
+					<div class="number"><span>第.天 <br/>15</span></div>
+					<div class="datas">
+						<h2 class="time6">...</h2>
+						<p>第15天，月经第15-16天移植。移植后要完全卧床静养1天，并补充黄体。</p>
+					</div>
+				</dt><br class="cb"/>
+				<dt>
+					<div class="number"><span>第.天 <br/>24</span></div>
+					<div class="datas">
+						<h2 class="time7">...</h2>
+						<p>第24天，月经第24-26天（移植后第9天）抽血验孕，即查HCG值。</p>
+					</div>
+				</dt><br class="cb"/>
+			</dl>
+		</div>
+		<div class="print-title">
+			<a onclick="printdiv('div_print');">打印</a>
+		</div>
+	</div>
+</section>
+{% endblock %}

@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% load mytags  %}
+{% block css %}<link rel="stylesheet" href="{% static 'css/contact.css' %}" type="text/css" />{% endblock %}
+{% block content %}
+<section class="background">
+	<img src="{% static 'img/contact/top.jpg'%}"/>
+</section>
+<section class="contact" jui-click="form" jui-tar=".submit span" jui-k="name,sex,email,phone,advice,reply" jui-url="/contactData/">
+	<h1>联系我们</h1>
+	<dl class="text">
+		<dt>地址：中国杭州世纪大道168号八方杰座大厦1幢303</dt>
+		<dt>电话：400-000-1311</dt>
+		<dt>邮箱：info@lotusivf.com</dt>
+	</dl>
+	<dl class="msg">
+		<dt>
+			<div class="title">姓名：</div>
+			<input name="name" type="text" />
+		</dt>
+		<dt class="line">
+			<div class="title">姓别：</div>
+			<input name="sex" type="text" />
+		</dt>
+		<dt>
+			<div class="title">邮件：</div>
+			<input name="email" type="text" />
+		</dt>
+		<dt class="line">
+			<div class="title">电话：</div>
+			<input name="phone" type="text" />
+		</dt>
+		<dt class="all">
+			<div class="title">咨询内容：</div>
+			<textarea name="advice"></textarea>
+		</dt>
+		<dt class="all">
+			<div class="title">期望得到的回复内容：</div>
+			<textarea name="reply"></textarea>
+		</dt>
+	</dl>
+	<br class="cb"/>
+	<div class="submit"><span id="submit">提交</span></div>
+</section>
+{% endblock %}
+{% block js %}
+<script>
+$('#submit').click(function(){
+	var name = $('input[name="name"]').val(),
+		sex = $('input[name="sex"]').val(),
+		email = $('input[name="email"]').val(),
+		phone = $('input[name="phone"]').val(),
+		advice = $('textarea[name="advice"]').val(),
+		reply = $('textarea[name="reply"]').val()
+	;
+	if(name.length<2) {alert('请填写姓名');return}
+	if(phone.length<6) {alert('请填写电话号码');return}
+	$.ajax({
+		url : '/contactData/',
+		data : {
+			name: name,
+			sex: sex,
+			email: email,
+			phone: phone,
+			advice: advice,
+			reply: reply
+		},
+		dataType : 'json',
+		success : function(back){
+			alert(back.msg);
+		}
+	})
+})
+</script>
+{% endblock %}

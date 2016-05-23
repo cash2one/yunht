@@ -1,0 +1,64 @@
+@import 'pub.less';
+@basew: 640rem;
+@basel: 20rem;
+header {
+	.mbblock {
+		.logo {
+			.mg-r(0,@basel);.hr(126rem);.psr;.fsr(21rem);
+			img {
+				.hr(110rem);
+			}
+			.text {
+				.psa;.lr(126rem);.tr(26rem);.wr(220rem);
+				.tit {
+					.fsr(26rem);.lhr(38rem);.c(#000);
+				}
+				.phone {
+					.lhr(34rem);.c(#888);
+				}
+			}
+			.language {
+				.psa;.r;.b-r(26rem);
+				a {
+					.c(#000);
+					&.active {
+						.c(#01BFCF);
+					}
+				}
+			}
+		}
+		.mbmenu {
+			.hr(88rem);.fsr(35rem);
+			p {
+				.psr;.zi(9);.bs;
+				a {
+					.dsb;.lhr(88rem);.pd-r(0,@basel);.bg(#fff);.c(#666);
+					&.active {
+						.bg(#05A4DB);.c(#fff);
+					}
+				}
+				&[show="0"] {
+					a:nth-child(n + 2) {
+						.dsn;
+					}
+				}
+			}
+		}
+	}
+}
+footer {
+	.mbblock {
+		.mobile_menu {
+			.dsb;.psf;.b;.w;.bs;
+			.lhr(100rem);.fsr(28rem);.fw(100);.bg(#fff);.zi(9);
+			a {
+				.c(#666);.dsb;.flt;.w(25%);.tct;
+				&.active {
+					.bg(#02BDCE);.c(#fff);
+				}
+			}
+		}
+	}
+}
+
+

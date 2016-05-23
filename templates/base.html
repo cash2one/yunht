@@ -1,0 +1,304 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html id="html" lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="{%static 'img/icon.png'%}" rel="icon" type="image/x-icon" />
+<title>{{seoTitle}}</title>
+<link rel="stylesheet" href="{% static 'css/jui.css' %}" type="text/css" />
+<link rel="stylesheet" href="{% static 'css/base.css' %}" type="text/css" />
+<!--[if IE]>
+<script>location.href='http://f.jiaolj.com/htm/ie/index.html?url='+location.href;</script>
+<![endif]-->
+{% block css %}{% endblock %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/mobile_base.css' %}"  media="screen and (max-width: 1003px)">
+</head>
+<body>
+<header>
+	<div class="pcblock">
+		<div class="bgs"></div>
+		<nav class="top hide">
+			<p class="message"><b>客户登录</b><b>客户在线建立医疗档案</b></p>
+			<p class="share"><img src="{% static 'img/top_qq.png' %}"/><img src="{% static 'img/top_wx.png' %}"/><img src="{% static 'img/top_sina.png' %}"/><img src="{% static 'img/top_f.png' %}"/></p>
+			<p class="language"><a href="?language=2">En<img src="{% static 'img/active_top.png' %}"/></a> <span>/</span> <a href="?language=1" class="active">中文<img src="{% static 'img/active_top.png' %}"/></a></p>
+		</nav>
+		{% block menu %}{% endblock %}
+		<!--顶部弹出菜单-begin-->
+		<div class="menuOpenAll hide">
+			<div class="menuOpen hide" active="success">
+				<a class="close">×</a>
+				<div class="middle">
+					<div class="title">成功案例</div>
+					<table>
+						<thead>
+							<tr><th><div class="box">成功案例</div></th></tr>
+						</thead>
+						<tbody>
+							{%for mn in successMenu%}
+							<tr>
+								{%for m in mn%}
+								<td><div class="box"><a target="_blank" href="/success/{{m.pk}}">{{m.name}}</a></div></td>
+								{%endfor%}
+							</tr>
+							{%endfor%}
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<div class="menuOpen hide" active="project">
+				<a class="close">×</a>
+				<div class="middle">
+					<div class="title">试管项目</div>
+					<table>
+						<thead>
+							<tr><th><div class="box">海外试管婴儿</div></th><th><div class="box">海外生育保存</div></th><th><div class="box">海外生育实验室</div></th></tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><div class="box"><a target="_blank" href="/project/ttp">海外试管婴儿</a></div></td>
+								<td><div class="box"><a target="_blank" href="/project/fp">海外生育保存</a></div></td>
+								<td><div class="box"><a target="_blank" href="/project/laboratory">海外生育实验室</a></div></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<div class="menuOpen hide" active="fee">
+				<a class="close">×</a>
+				<div class="middle">
+					<div class="title">试管费用</div>
+					<table>
+						<thead>
+							<tr><th><div class="box">试管费用</div></th></tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><div class="box"><a target="_blank" href="/fee/#pro1">泰国试管婴儿翻译吃住套餐 ￥6.8万</a></div></td>
+								<td><div class="box"><a target="_blank" href="/fee/#pro2">泰国试管婴儿VIP套餐17.8万人民币</a></div></td>
+								<td><div class="box"><a target="_blank" href="/fee/#pro3">美国试管婴儿套餐2.8万美金</a></div></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<div class="menuOpen hide" active="hospital">
+				<a class="close">×</a>
+				<div class="middle">
+					<div class="title">试管医院</div>
+					<table>
+						<thead>
+							<tr><th><div class="box">美国试管医院</div></th><th><div class="box">泰国试管医院</div></th><th><div class="box">柬埔寨试管医院</div></th></tr>
+						</thead>
+						<tbody>
+							{%for mn in hospitalMenu%}
+							<tr>
+								{%for m in mn%}
+								<td><a target="_blank" href="/hospital/{{m.pk}}"><div class="box">{{m.name}}</div></a></td>
+								{%endfor%}
+							</tr>
+							{%endfor%}
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<div class="menuOpen hide" active="knowledge">
+				<a class="close">×</a>
+				<div class="middle">
+					<div class="title">知识课堂</div>
+					<table>
+						<thead>
+							<tr><th><div class="box">知识课堂</div></th></tr>
+						</thead>
+						<tbody>
+							{%for mn in classMenu%}
+							<tr>
+								{%for m in mn%}
+								<td><a target="_blank" href="/knowledge/{{m.pk}}"><div class="box">{{m.name}}</div></a></td>
+								{%endfor%}
+							</tr>
+							{%endfor%}
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<div class="menuOpen hide" active="contact">
+				<a class="close">×</a>
+				<div class="middle">
+					<div class="title">关于我们</div>
+					<table>
+						<thead>
+							<tr><th><div class="box">关于我们</div></th></tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><div class="box"><a target="_blank" href="/about/">关于我们</a></div></td>
+								<td><div class="box"><a target="_blank" href="/contact/">联系我们</a></div></td>
+								<td><div class="box"><a target="_blank" href="/fee/#pro3">&nbsp;</a></div></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+		<!--顶部弹出菜单-end-->
+		<div class="logo">
+			<a href="/">
+				<img src="{% static 'img/icon.png' %}"/>
+				<div class="text">
+					<p class="tit">云荷廷生育医疗</p>
+					<p class="phone">400-000-1311</p>
+				</div>
+			</a>
+			<nav class="menu menuClick" jui-animate="hover1"jui-tar="a">
+				{%for m in menuList%}
+				<a active="{{m.active}}" {%ifequal m.active active%} class="active"{%endifequal%}>{{m.name}}</a> <!--href="{{m.href}}"-->
+				{%endfor%}
+			</nav>
+		</div>
+	</div>
+	<div class="mbblock">
+		<div class="logo">
+			<a href="/">
+				<img src="{% static 'img/icon.png' %}"/>
+				<div class="text">
+					<p class="tit">云荷廷生育医疗</p>
+					<p class="phone">400-000-1311</p>
+				</div>
+			</a>
+			<span class="language"><a href="?language=2">EN<a> / <a href="?language=1" class="active">中文</a></span>
+		</div>
+		<div class="mbmenu">
+			<p show="0">
+			{%for m in menuList%}
+			<a link="{{m.href}}" {%ifequal m.active active%} class="active"{%endifequal%}>{{m.name}}</a>
+			{%endfor%}
+			</p>
+		</div>
+	</div>
+</header>
+<content>
+{% block content %}{% endblock %}
+</content>
+<footer>
+	<div class="pcblock">
+		<section class="top">
+			<div class="mid">
+				<dl>
+					<dt>
+						<p class="head">服务项目</p>
+						<p><a href="/project/ttp" target="_blank">海外试管婴儿</a></p>
+						<p><a href="/project/fp" target="_blank">海外生育保存</a></p>
+						<p><a href="/project/laboratory" target="_blank">海外第三方助孕</a></p>
+					</dt>
+					<dt class="linel">
+						<p class="head">成功率</p>
+						<p><a href="/success/" target="_blank">成功率</a></p>
+						<p><a href="/success/" target="_blank">客户案例</a></p>
+						<p><a href="" target="_blank"></a></p>
+					</dt>
+					<dt class="linel">
+						<p class="head">服务费用</p>
+						<p><a href="/fee/" target="_blank">美国试管套餐</a></p>
+						<p><a href="/fee/" target="_blank">泰国柬埔寨翻译吃住套餐</a></p>
+						<p><a href="/fee/" target="_blank">泰国柬埔寨VIP套餐</a></p>
+					</dt>
+					<dt class="linel">
+						<p class="head">合作医院</p>
+						<p><a href="/hospital/" target="_blank">美国医院</a></p>
+						<p><a href="/hospital/" target="_blank">泰国医院</a></p>
+						<p><a href="/hospital/" target="_blank">柬埔寨医院</a></p>
+					</dt>
+					<dt class="linel">
+						<p class="head">关于我们</p>
+						<p><a href="/about/" target="_blank">公司简介</a></p>
+						<p><a href="/contact/" target="_blank">联系我们</a></p>
+						<p><a href="" target="_blank"></a></p>
+					</dt>
+					<br class="cb"/>
+				</dl>
+				<!--<table>
+					<thead>
+						<tr>
+							<th>服务项目</th><th>成功率</th><th>服务费用</th><th>合作医院</th><th>关于我们</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr><td></td><td>成功率</td><td>美国试管套餐</td><td>美国医院</td><td><a href="/about/" target="_blank">公司简介</a></td></tr>
+						<tr><td><a href="/project/fp" target="_blank">海外生育保存</a></td><td>客户案例</td> <td>泰国柬埔寨翻译吃住套餐</td><td>泰国医院</td><td><a href="/contact/" target="_blank">联系我们</a></td></tr>
+						<tr><td><a href="/project/laboratory" target="_blank">海外生育实验室</a></td><td></td><td>泰国柬埔寨VIP套餐</td><td>柬埔寨医院</td><td></td></tr>
+					</tbody>
+				</table>-->
+				<div class="share">
+					<b><img src="{% static 'img/foot_qq.png' %}"/><img src="{% static 'img/foot_wx.png' %}"/><img src="{% static 'img/foot_sina.png' %}"/><img src="{% static 'img/foot_f.png' %}"/></b>
+					<span>中国办公地址：中国杭州世纪大道168号</span>
+				</div>
+			</div>
+		</section>
+		<section class="bottom">
+			<div class="mid">
+				<nav>
+					<p class="logo2"><img src="{% static 'img/icon.png' %}"/></p>
+					<p class="text">
+						云荷廷生育医疗 400-000-1311 
+						<br/>
+						SiteMap, Privacy Policies, Contact Us
+					</p>
+					<p class="language"><a href="?language=2">En</a> <span>/</span> <a href="?language=1" class="active">中文</a></p>
+				</nav>
+				<div class="tct">备案号：浙ICP 备 15044537 号</div>
+				<div class="icon">
+					<div class="btns btn4" id="qrcode">
+						<img src="{% static 'img/qrcode.png' %}">
+						<span></span>
+					</div>
+					<div class="btns btn3" jui-click="show-hide" jui-tar="#qrcode"><img src="{% static 'img/qrcode_min.png' %}"></div>
+					<div class="btns btn1"><b></b></div>
+					<!--<div class="btns btn2" jui-click="toTop"><b></b></div>-->
+				</div>
+			</div>
+		</section>
+	</div>
+	<div class="mbblock">
+		<nav class="mobile_menu">
+			<a class="active">首页</a>
+			<a>登录</a>
+			<a>注册</a>
+			<a>联系</a>
+			<br class="cb"/>
+		</nav>
+	</div>
+</footer>
+<script src="{% static 'js/jquery-1.12.2.js' %}"></script>
+<script src="{% static 'js/jui.js' %}"></script>
+<script>
+var log = function(d){console && console.log(d)};
+Jui.init({
+});
+$('.menuClick a').click(function(){
+	var o = $(this),
+		active = o.attr('active')
+	;
+	if(active=='index') location.href = '/';
+	$('.menuOpen[active="'+active+'"]').removeClass('hide').css({height:'0',top:'100%'}).animate({height:'4.88rem',top:'0'});
+	$('.menuOpenAll .menuOpen').each(function(k,i){
+		if(!$(i).hasClass('hide')) $('.menuOpenAll').removeClass('hide');
+	})
+})
+$('.menuOpen a.close').click(function(){
+	$(this).parent().animate({height:'0'},function(){
+		$(this).css('height','4.88rem').addClass('hide');
+		var s = 0;
+		$('.menuOpenAll .menuOpen').each(function(k,i){
+			log($(i).hasClass('hide'));
+			if(!$(i).hasClass('hide')) s=1;
+		})
+		if(s==0) $('.menuOpenAll').addClass('hide');
+	})
+})
+</script>
+{% block js %}{% endblock %}
+<script src="http://kefu.qycn.com/vclient/state.php?webid=114604" language="javascript" type="text/javascript"></script>
+</body>
+</html>

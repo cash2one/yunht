@@ -1,0 +1,132 @@
+@import 'pub.less';
+html{.h;.fs(100px)}
+body{.h;.w;.psr;.fs(12px);.ofh;font-family:'Lucida Grande',Arial,sans-serif;}
+body,dl,p,table,h1,h2,h3,h4,h5,h6{margin:0}
+h1,h2,h3,h4,h5,h6{.fs;.fw(500)}
+a{.tdn;.csr}.hide{.dsn}
+input,button{.otl} iframe{.bdn} img{.val;.bdn}
+.cb{.cb}
+.flt{.flt}
+.frt{.frt}
+.dsn{.dsn}.vbh{.vbh}
+.tlt{.tct(left)}.trt{.tct(right)}.tct{.tct}
+.loading {.psa;.w;.h}
+.close {.psa;.r(1px);.t(1px)}
+.trgt {
+	.trgt(#333,5px);.psr;.t(-1px);
+}
+dl.nav dt,nav.nav p,nav.menu-tab p {.flt}
+table {
+	border:0;margin:0;border-collapse:collapse;border-spacing:0;
+	td,th {padding:0}td{.tct}
+}
+.button {
+	.dsib;.br(3px);.pd(0 2px);.bg(#F2F2F2);.c(#666);
+	border: solid #777;
+	border-width: 1px 1px 2px 1px;
+	&:hover {
+		.bg(#fff);.c(#666);
+	}
+}
+.button-green {.button-color(green)}
+.button-red {.button-color(red)}
+
+.jui-cover {
+	.w;.h;.psf;.bg(rgba(255,255,255,0.4));.zi(9);.dsn;
+}
+.jui-form {
+	.r(20%);.t(15%);.pd-r(16rem);.psf;.zi(3);.bg(#fff);.bs;.dsn;
+	.jui-box {
+		.ofh;
+		table {
+			.lhr(26rem);
+			tr {
+				td {
+					.tct(left);
+					&:nth-child(1) {
+						.w(40%);
+					}
+					&:nth-child(2) {
+						.w(60%);
+						input[type="text"] {
+							.w(90%);
+						}
+					}
+				}
+				&.submit {
+					td {
+						.pdtr(10rem);
+					}
+				}
+			}
+		}
+	}
+}
+.jui-alert {
+	.psa;.pd-r(10rem);.wr(440rem);.mglr(-210rem);.brr(3rem);.bd;.l(50%);.zi(99);.bg(#F2F2F2);.fs(14px);.dsn;.bs-alert;
+	.confirm {
+		.alertInner {
+			h1 {
+				.tir(6rem);.fs(16px);
+				.lh(35px);
+				i {
+					.mgrr(6rem);
+				}
+			}
+			.msg {
+				.pd-r(15rem,10rem);
+				&.login {
+					p {
+						.mgtr(8rem);
+						&.error {
+							.c(red);
+						}
+					}
+				}
+			}
+			&.green {
+				.bd(green);
+				h1 {
+					.c(green);.bg(#E4FFE8);.bdb(#4BAC4B);
+				}
+			}
+			&.red {
+				.bd(#FF6600);
+				h1 {
+					.c(#FF6600);.bg(#FFEDE1);.bdb(#FFAF7A);
+				}
+			}
+		}
+		.toolBar {
+			.psr;
+			nav {
+				.h(28px);
+				p {
+					.lh(38px);.mglr(9rem);
+				}
+			}
+			span {
+				.psa;.r;
+			}
+		}
+	}
+}
+
+*[jui-click="jui-switch"] {
+	.psr;.tr(6rem);.brr(12rem);.dsib;.wr(44rem);.hr(20rem);.csr;
+	&:before {
+		content:'';.psa;.dsib;.bolr(18rem);.tr(1rem);.bg(#fff);
+	}
+	&[s="1"]{
+		.bg(#999);
+		&:before {
+			.lr(1rem);
+		}
+	}
+	&[s="0"]{
+		.bg(#ddd);
+		&:before {
+			.rr(1rem);
+		}
+	}
+}

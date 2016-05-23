@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% load mytags  %}
+{% block css %}<link rel="stylesheet" href="{% static 'css/success.css' %}" type="text/css" />{% endblock %}
+{% block content %}
+<section class="background">
+	<img src="{% static 'img/success/top.png'%}"/>
+</section>
+<section class="list">
+	<dl>
+	{%for r in resultList%}
+		<dt><a target="_blank" href="/success/{{r.pk}}">
+			<div class="img"><img src="{{r.pic}}"></div>
+			<div class="text">
+				<h3>{{r.name}}</h3>
+				<p>
+					<pre>{{r.abs}}</pre>
+				</p>
+			</div>
+			<br class="cb"/>
+		</a></dt>
+	{%endfor%}
+</section>
+{% endblock %}

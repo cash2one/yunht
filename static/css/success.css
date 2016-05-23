@@ -1,0 +1,47 @@
+content section.list {
+  margin: 0 0.26rem;
+}
+content section.list dl dt {
+  margin-top: 0.32rem;
+  margin-bottom: 0.24rem;
+  position: relative;
+}
+content section.list dl dt .img {
+  width: 20%;
+  float: left;
+}
+content section.list dl dt .img img {
+  width: 100%;
+}
+content section.list dl dt .text {
+  float: left;
+  margin-left: 2%;
+  width: 78%;
+}
+content section.list dl dt .text h3 {
+  font-size: 0.22rem;
+  font-weight: 500;
+  color: #008fd3;
+  line-height: 0.46rem;
+}
+content section.list dl dt .text p {
+  font-size: 0.13rem;
+  line-height: 0.22rem;
+  color: #000000;
+}
+content section.list dl dt .allText {
+  color: #777777;
+  font-size: 0.13rem;
+  line-height: 0.3rem;
+  margin-top: 0.32rem;
+  margin-bottom: 0.24rem;
+}
+content section.doctor h2 {
+  font-size: 0.24rem;
+  line-height: 0.56rem;
+  color: #008fd3;
+  text-align: center;
+}
+content section.doctor .detail {
+  margin: 0.2rem 0.26rem;
+}

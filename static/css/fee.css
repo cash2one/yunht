@@ -1,0 +1,103 @@
+content section.chart {
+  height: 3.2rem;
+  margin: 0.36rem 0.52rem;
+  position: relative;
+}
+content section.chart .data {
+  width: 3.2rem;
+  height: 3.2rem;
+}
+content section.chart .text {
+  width: 5.86rem;
+  position: absolute;
+  top: 0.6rem;
+  right: 0.8rem;
+}
+content section.chart .text h3 {
+  font-size: 0.22rem;
+  font-weight: 500;
+  color: #008fd3;
+  line-height: 0.46rem;
+}
+content section.chart .text p {
+  font-size: 0.13rem;
+  line-height: 0.22rem;
+}
+content section.fee .menu {
+  line-height: 0.6rem;
+  background: #cccccc;
+  font-size: 0.22rem;
+  position: relative;
+}
+content section.fee .menu .one {
+  margin-left: 0.92rem;
+}
+content section.fee .menu .two {
+  position: absolute;
+  right: 1.2rem;
+}
+content section.fee dl.list {
+  margin: 0.28rem 0.26rem 1.88rem 0.26rem;
+}
+content section.fee dl.list dt .text {
+  position: relative;
+  padding-top: 0.09rem;
+  padding-bottom: 0.18rem;
+  border-bottom: 1px solid #e9e9e9;
+  line-height: 0.22rem;
+  height: 0.44rem;
+}
+content section.fee dl.list dt .text span {
+  display: inline-block;
+}
+content section.fee dl.list dt .text span.abstr {
+  font-size: 0.12rem;
+  width: 6.56rem;
+}
+content section.fee dl.list dt .text span.title {
+  position: absolute;
+  right: 0%;
+  background: #71c0e7;
+  border-radius: 0.06rem;
+  line-height: 0.4rem;
+  font-size: 0.14rem;
+  padding: 0 0.28rem;
+  text-align: center;
+  color: #ffffff;
+  cursor: pointer;
+}
+content section.fee dl.list dt .text span.title:before {
+  content: '';
+  position: absolute;
+  bottom: -0.09rem;
+  left: 47%;
+  display: inline-block;
+  border-top: 0.14rem solid #71c0e7;
+  border-left: 0.09rem solid transparent;
+  border-right: 0.09rem solid transparent;
+}
+content section.fee dl.list dt .detail {
+  border: 1px solid #cccccc;
+  margin-top: 0.46rem;
+}
+content section.fee dl.list dt .detail h3 {
+  font-size: 0.18rem;
+  text-align: center;
+  line-height: 0.5rem;
+}
+content section.fee dl.list dt .detail dl {
+  font-size: 0.14rem;
+  color: #666666;
+  line-height: 0.3rem;
+  margin-left: 0.32rem;
+  margin-bottom: 0.14rem;
+}
+content section.fee dl.list dt .detail dl dt.i {
+  font-style: italic;
+}
+content section.fee dl.list dt .detail dl dt.red {
+  color: #ff0000;
+}
+content section.fee dl.list dt.active .text {
+  border: none;
+}

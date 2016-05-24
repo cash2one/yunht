@@ -191,30 +191,34 @@ content {
   width: 100%;
   margin: 0 auto;
 }
-content section.background {
+content .background {
   position: relative;
 }
-content section.background .covers {
+content .background .covers {
   position: absolute;
-  top: 2.6rem;
   color: #ffffff;
   font-size: 0.32rem;
   text-align: center;
   width: 100%;
 }
-content section.background .covers span {
+content .background .covers span {
   background: rgba(247, 187, 67, 0.5);
-  padding: 0.14rem;
-  line-height: 1.2rem;
   display: inline-block;
   border-radius: 0.03rem;
 }
-content section.background video,
-content section.background img {
+content .background video,
+content .background img {
   width: 100%;
 }
 content .pcblock {
   display: none;
+}
+content .pcblock .covers {
+  top: 2.6rem;
+}
+content .pcblock .covers span {
+  padding: 0.14rem;
+  line-height: 1.2rem;
 }
 footer .pcblock {
   display: none;

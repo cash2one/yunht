@@ -20,24 +20,21 @@ $('.animateText .showHide').each(function(k,i){
 	start.css({height:'0.04rem',top:start.attr('t')+'rem'});
 })
 $('.animateText').hover(function(){
+	$(this).stop(false,true).animate();
 	var o = $(this),
 		h3 = o.find('h3'),
 		cnt = o.find('.cnt'),
 		cnth = cnt.attr('h'),
-		start = o.find('.start'),
-		is = parseInt(o.attr('is'))
+		start = o.find('.start')
 	;
-	log(is);
-	if(is==0){
-		o.attr('is',1);
-		h3.animate({'top':'0rem','text-align':'center'},100,function(){
-			cnt.animate({height:cnth+'px',top:'-='+cnth+'px'},200,function(){
-				o.attr('is',0);
-			})
-			start.animate({height:'0.46rem',top:'0rem'},300)
+	h3.animate({'top':'0rem','text-align':'center'},200,function(){
+		cnt.animate({height:cnth+'px',top:'-='+cnth+'px'},300,function(){
+			o.attr('is',0);
 		})
-	}
+		start.animate({height:'0.46rem',top:'0rem'},300)
+	})
 },function(){
+	$(this).stop(false,true).animate();
 	var o = $(this),
 		h3 = o.find('h3'),
 		cnt = o.find('.cnt'),
@@ -45,11 +42,11 @@ $('.animateText').hover(function(){
 		start = o.find('.start')
 		is = parseInt(o.attr('is'))
 	;
-	start.animate({height:'0.04rem',top:start.attr('t')+'rem'},100,function(){
-		cnt.animate({height:'1px',top:cnth+'px'},60,function(){
+	start.animate({height:'0.04rem',top:start.attr('t')+'rem'},200,function(){
+		cnt.animate({height:'1px',top:cnth+'px'},300,function(){
 			
 		})
-		h3.animate({'top':h3.attr('t')+'rem','text-align':'center'},30)
+		h3.animate({'top':h3.attr('t')+'rem','text-align':'center'},300)
 	})
 })
 

@@ -3,16 +3,17 @@
 @basew : 1400rem;
 @blue: #01BCCF;
 @blue2: #02BDCE;
+@cold:#5C9DCE;
 header {
 	.pcblock {
-		.fsr(14rem);.w;.t;.zi(9);.psf;.bs;.dsn;
+		.fsr(14rem);.w;.t;.zi(9);.psr;.bs;.dsn;
 		.bgs {
 			.bg(rgba(255,255,255,0.7));.psa;.w;.h;.l;.t;
 		}
 		.menuOpenAll {
 			.psr;.hr(488rem);.ofh;
 			.menuOpen {
-				.bg(#6FA8D4);.h;.psa;.w;
+				.bg(@blue);.h;.psa;.w;
 				@cor1:#C6DAEA;
 				@cor2:#f5f5f5;
 				.close {
@@ -53,42 +54,6 @@ header {
 		}
 		nav {
 			.fs(16px);
-			&.top {
-				.lhr(42rem);.bdb(#eee);.psr;
-				p {
-					.psr;
-					&.message {
-						.mg-r(0,@basel);
-						b {
-							.mgrr(30rem);
-						}
-					}
-					&.share {
-						.rr(296rem);.psa;.bdr(#eee);.hr(26rem);.tr(12rem);
-						img {
-							.mgrr(16rem);.h;.psr;.tr(-9rem);
-						}
-					}
-					&.language {
-						.rr(@basel);.psa;.tr(4rem);.fsr(13rem);
-						a {
-							.c(#000);.psr;
-							img {
-								.wr(24rem);.psa;.tr(36rem);.lr(0rem);.dsn;
-							}
-							&.active {
-								.c(#01BFCF);
-								img {
-									.dsb;
-								}
-							}
-						}
-						span {
-							.mg-r(0,10rem);
-						}
-					}
-				}
-			}
 			&.menu {
 				.lhr(46rem);.psa;.rr(@basel);.tr(32rem);
 				a {
@@ -104,6 +69,42 @@ header {
 					.wr(192rem);.bg(#bbb);.c(#fff);.tct;.mgrr(114rem);.dsib;
 					&.active {
 						.bg(#008FD5);
+					}
+				}
+			}
+		}
+		.top {
+			.lhr(82rem);.hr(82rem);.bdb(#eee);.psr;.bg(@cold);//.bg(@blue2);
+			.start {
+				.psa;.lr(500rem);.hr(32rem);.lhr(32rem);.brr(12rem);.pd-r(0,18rem);.mgtr(26rem);.bg(#a1c7e3);.csr;
+				&:hover {
+					.bg(lighten(#a1c7e3,5%));
+				}
+				a {
+					.c(#fff);
+				}
+			}
+			.share {
+				.psa;.rr(296rem);
+				a {
+					.bg(#a1c7e3);.dsib;.bolr(38rem);.lhr(38rem);.mgrr(6rem);
+					&:hover {
+						.bg(lighten(#a1c7e3,5%));
+					}
+					img {
+						.hr(22rem);.mglr(6rem);
+					}
+				}
+			}
+			.language {
+				.psa;.lr(100rem);
+				a.img {
+					.bd(#a1c7e3);.bolr(39rem);.dsb;.lhr(36rem);.mgtr(26rem);
+					&:hover {
+						.bg(lighten(#a1c7e3,5%));
+					}
+					img {
+						.sqar(27rem);.mglr(6rem);
 					}
 				}
 			}

@@ -191,13 +191,14 @@ content section.half p.start {
   position: relative;
   overflow: hidden;
 }
-content section.half p.start input {
+content section.half p.start input[type="button"] {
   background: #01bccf;
   color: #ffffff;
   height: 0.46rem;
   width: 1.76rem;
   font-size: 0.15rem;
   cursor: pointer;
+  border-radius: 0.08rem;
 }
 content section.half dl dt {
   position: relative;

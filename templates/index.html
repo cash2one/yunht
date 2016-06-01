@@ -20,6 +20,7 @@ $('.animateText .showHide').each(function(k,i){
 	start.css({height:'0.04rem',top:start.attr('t')+'rem'});
 })
 $('.animateText').hover(function(){
+	$(this).stop(false,true).animate();
 	var o = $(this),
 		h3 = o.find('h3'),
 		cnt = o.find('.cnt'),
@@ -45,20 +46,56 @@ $('.animateText').hover(function(){
 		start = o.find('.start')
 		is = parseInt(o.attr('is'))
 	;
-	start.animate({height:'0.04rem',top:start.attr('t')+'rem'},100,function(){
-		cnt.animate({height:'1px',top:cnth+'px'},60,function(){
+	start.animate({height:'0.04rem',top:start.attr('t')+'rem'},200,function(){
+		cnt.animate({height:'1px',top:cnth+'px'},300,function(){
 			
 		})
-		h3.animate({'top':h3.attr('t')+'rem','text-align':'center'},30)
+		h3.animate({'top':h3.attr('t')+'rem','text-align':'center'},300)
 	})
 })
 
-$('.tb2 p b').css({'font-size':'0.16rem'}).animate({'font-size':'0.28rem'},3000);
+//$('.tb2 p b').css({'font-size':'0.16rem'}).animate({'font-size':'0.28rem'},3000);
+
+setInterval(function(){
+	$('.tb2 p b').each(function(k,i){
+		var o = $(i),
+			prt = o.parent(),
+			txt = o.text(),
+			e = parseInt(o.attr('e')) || 1,
+			start = parseInt(o.attr('start')) || 0,
+			em = o.attr('em') || '',
+			num = parseInt(o.attr('num'))
+		;
+		o.find('b.before').remove();
+		//o.find('b.after').remove();
+		if(start<num){
+			start+=e;
+			if(start>num) start = num;
+			o.attr('start',start);
+			o.text(start+em);
+			o.append('<b class="before">'+start+em+'</b>');
+			//o.append('<b class="after">'+start+em+'</b>');
+			o.find('b.before').animate({top:'-120%'},96);
+			//o.css({top:'50%'}).animate({top:'0'},96);
+			//o.find('b.after').animate({top:'-100%'},20);
+		}
+		/*else{
+			o.text(start+em);
+			o.find('b.before').remove();
+			o.find('b.after').remove();
+		}*/
+	})
+},100)
 </script>
 {% endblock %}
 {% block content %}
 <section class="background">
-	<div class="covers"><span>We believe everyone is entitled to a complete family.</span></div>
+	<div class="pcblock">
+		<div class="covers"><span>We believe everyone is entitled to a complete family.</span></div>
+	</div>
+	<div class="mbblock">
+		<div class="covers"><span>We believe everyone is entitled to a complete family.</span></div>
+	</div>
 	<img src="{% static 'img/fee/top.jpg'%}"/>
 	<!--<video autoplay="" loop="" muted="" poster="https://www.conceiveabilities.com/content/hero-ice-cream-poster.jpg">
 		<source src="https://www.conceiveabilities.com/content/hero-ice-cream.webm" type="video/webm">
@@ -119,10 +156,10 @@ $('.tb2 p b').css({'font-size':'0.16rem'}).animate({'font-size':'0.28rem'},3000)
 	<br class="cb"/>
 	<section class="tb2">
 		<nav>
-			<p>累计行业经验超过<br/><b>20年</b></p>
-			<p class="line line2">核心团队累计服务过<br/><b>12</b>个国家的客户</p>
-			<p class="line">核心团队累计帮助<br/>超过<b>700</b>个家庭</p>
-			<p class="line line2">成功率高达<br/><b>82%</b</p>
+			<p>累计接待咨询<br/><b num="5000" e="500" em="+">&nbsp;</b> 例</p>
+			<p class="line line2">签约客户<br/><b num="109" e="10">&nbsp;</b> 位</p>
+			<p class="line">目前已出生宝宝<br/><b num="57" e="6">&nbsp;</b> 名</p>
+			<p class="line line2">成功率高达<br/><b num="82" e="8" em="%">&nbsp;</b></p>
 			<br class="cb"/>
 		</nav>
 		<div class="tips hide">

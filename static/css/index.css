@@ -90,10 +90,18 @@ content section.tb2 nav p {
   line-height: 0.6rem;
   height: 1.36rem;
   width: 17%;
+  position: relative;
 }
 content section.tb2 nav p b {
   font-size: 0.28rem;
   color: #fcfe00;
+  position: relative;
+  top: 0.02rem;
+}
+content section.tb2 nav p b.before {
+  position: absolute;
+  left: 0;
+  top: -25%;
 }
 content section.tb2 .tips {
   margin-top: 0.7rem;
@@ -191,13 +199,14 @@ content section.half p.start {
   position: relative;
   overflow: hidden;
 }
-content section.half p.start input {
+content section.half p.start input[type="button"] {
   background: #01bccf;
   color: #ffffff;
   height: 0.46rem;
   width: 1.76rem;
   font-size: 0.15rem;
   cursor: pointer;
+  border-radius: 0.08rem;
 }
 content section.half dl dt {
   position: relative;

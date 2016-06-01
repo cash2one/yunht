@@ -1,3 +1,6 @@
+.mbblock {
+  display: none;
+}
 header .mbblock .logo {
   margin: 0 0.2rem;
   height: 1.26rem;
@@ -55,6 +58,15 @@ header .mbblock .mbmenu p a.active {
 }
 header .mbblock .mbmenu p[show="0"] a:nth-child(n + 2) {
   display: none;
+}
+content .mbblock .covers {
+  top: 0.7rem;
+  width: 80%;
+  left: 10%;
+}
+content .mbblock .covers span {
+  line-height: 0.5rem;
+  padding: 0.12rem 0;
 }
 footer .mbblock .mobile_menu {
   display: block;

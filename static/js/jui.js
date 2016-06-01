@@ -32,14 +32,14 @@
 			getSize : function(){
 				_cw = document.body.clientWidth;
 				if(_cw>=1002){
+					_html.style.fontSize = _cw*100/1400+'px';
 					$('.mbblock').hide();
 					$('.pcblock').show();
-					_html.style.fontSize = _cw*100/1400+'px';
 				}
 				else{
+					_html.style.fontSize = _cw*100/640+'px';
 					$('.mbblock').show();
 					$('.pcblock').hide();
-					_html.style.fontSize = _cw*100/640+'px';
 				}
 			},
 			jui : {

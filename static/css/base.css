@@ -1,3 +1,6 @@
+.pcblock {
+  display: none;
+}
 header .pcblock {
   font-size: 0.14rem;
   width: 100%;
@@ -5,7 +8,6 @@ header .pcblock {
   z-index: 9;
   position: relative;
   box-shadow: 0px 2px 12px #cccccc;
-  display: none;
 }
 header .pcblock .bgs {
   background: rgba(255, 255, 255, 0.7);
@@ -222,9 +224,6 @@ content .background video,
 content .background img {
   width: 100%;
 }
-content .pcblock {
-  display: none;
-}
 content .pcblock .covers {
   top: 2.6rem;
 }
@@ -233,7 +232,6 @@ content .pcblock .covers span {
   line-height: 1.2rem;
 }
 footer .pcblock {
-  display: none;
   margin-top: 0.2rem;
   padding-top: 0.2rem;
   background: #121212;

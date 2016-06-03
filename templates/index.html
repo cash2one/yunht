@@ -25,20 +25,16 @@ $('.animateText').hover(function(){
 		h3 = o.find('h3'),
 		cnt = o.find('.cnt'),
 		cnth = cnt.attr('h'),
-		start = o.find('.start'),
-		is = parseInt(o.attr('is'))
+		start = o.find('.start')
 	;
-	log(is);
-	if(is==0){
-		o.attr('is',1);
-		h3.animate({'top':'0rem','text-align':'center'},100,function(){
-			cnt.animate({height:cnth+'px',top:'-='+cnth+'px'},200,function(){
-				o.attr('is',0);
-			})
-			start.animate({height:'0.46rem',top:'0rem'},300)
+	h3.animate({'top':'0rem','text-align':'center'},100,function(){
+		cnt.animate({height:cnth+'px',top:'-='+cnth+'px'},200,function(){
+			o.attr('is',0);
 		})
-	}
+		start.animate({height:'0.46rem',top:'0rem'},300)
+	})
 },function(){
+	$(this).stop(false,true).animate();
 	var o = $(this),
 		h3 = o.find('h3'),
 		cnt = o.find('.cnt'),
@@ -54,38 +50,50 @@ $('.animateText').hover(function(){
 	})
 })
 
-//$('.tb2 p b').css({'font-size':'0.16rem'}).animate({'font-size':'0.28rem'},3000);
-
-setInterval(function(){
-	$('.tb2 p b').each(function(k,i){
-		var o = $(i),
-			prt = o.parent(),
-			txt = o.text(),
-			e = parseInt(o.attr('e')) || 1,
-			start = parseInt(o.attr('start')) || 0,
-			em = o.attr('em') || '',
-			num = parseInt(o.attr('num'))
-		;
-		o.find('b.before').remove();
-		//o.find('b.after').remove();
-		if(start<num){
-			start+=e;
-			if(start>num) start = num;
-			o.attr('start',start);
-			o.text(start+em);
-			o.append('<b class="before">'+start+em+'</b>');
-			//o.append('<b class="after">'+start+em+'</b>');
-			o.find('b.before').animate({top:'-120%'},96);
-			//o.css({top:'50%'}).animate({top:'0'},96);
-			//o.find('b.after').animate({top:'-100%'},20);
+window.onload = function(){
+	var cTop = $('.tb2')[0].offsetTop,
+		isShow = function(){
+			if(document.body.scrollTop>cTop*0.66){
+				_isSHow = 1;
+			};
+	};
+	isShow();
+	window.onscroll = function(){
+		isShow();
+	}
+	setInterval(function(){
+		if(_isSHow==1){
+			$('.tb2 p b').each(function(k,i){
+				var o = $(i),
+					prt = o.parent(),
+					txt = o.text(),
+					e = parseInt(o.attr('e')) || 1,
+					start = parseInt(o.attr('start')) || 0,
+					em = o.attr('em') || '',
+					num = parseInt(o.attr('num'))
+				;
+				o.find('b.before').remove();
+				//o.find('b.after').remove();
+				if(start<num){
+					start+=e;
+					if(start>num) start = num;
+					o.attr('start',start);
+					o.text(start+em);
+					o.append('<b class="before">'+start+em+'</b>');
+					//o.append('<b class="after">'+start+em+'</b>');
+					o.find('b.before').animate({top:'-120%'},96);
+					//o.css({top:'50%'}).animate({top:'0'},96);
+					//o.find('b.after').animate({top:'-100%'},20);
+				}
+				/*else{
+					o.text(start+em);
+					o.find('b.before').remove();
+					o.find('b.after').remove();
+				}*/
+			})
 		}
-		/*else{
-			o.text(start+em);
-			o.find('b.before').remove();
-			o.find('b.after').remove();
-		}*/
-	})
-},100)
+	},100);
+}
 </script>
 {% endblock %}
 {% block content %}

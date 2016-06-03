@@ -19,11 +19,6 @@
 <header>
 	<div class="pcblock">
 		<div class="bgs"></div>
-		<nav class="top hide">
-			<p class="message"><b>客户登录</b><b>客户在线建立医疗档案</b></p>
-			<p class="share"><img src="{% static 'img/top_qq.png' %}"/><img src="{% static 'img/top_wx.png' %}"/><img src="{% static 'img/top_sina.png' %}"/><img src="{% static 'img/top_f.png' %}"/></p>
-			<p class="language"><a href="?language=2">En<img src="{% static 'img/active_top.png' %}"/></a> <span>/</span> <a href="?language=1" class="active">中文<img src="{% static 'img/active_top.png' %}"/></a></p>
-		</nav>
 		{% block menu %}{% endblock %}
 		<!--顶部弹出菜单-begin-->
 		<div class="menuOpenAll hide">
@@ -149,7 +144,8 @@
 			</div>
 			<div class="share">
 				<a href="http://weibo.com/5759505807/profile?topnav=1&wvr=6&is_all=1" target="_blank"><img src="{% static 'img/share/sina_white.png' %}"/></a>
-				<a href="http://t.qq.com/lotusivf " target="_blank"><img src="{% static 'img/share/tx_white.png' %}"/></a>
+				<a href="http://t.qq.com/lotusivf" target="_blank"><img src="{% static 'img/share/tx_white.png' %}"/></a>
+				<a href="http://mp.weixin.qq.com/profile?src=3&timestamp=1464852943&ver=1&signature=nDIc3Z14boxMsL0iVrusakrBnjYbRiGcXemOagPBg4q56cQLj1kTCkcj82hPByKyTnrNtrYXLrPedLkSgcvWGA==" target="_blank"><img src="{% static 'img/share/wx_white.png' %}"/></a>
 			</div>
 			<div class="language">
 				<a class="img"><img src="{% static 'img/share/globe.svg' %}" /></a>
@@ -243,7 +239,11 @@
 					</tbody>
 				</table>-->
 				<div class="share">
-					<b><img src="{% static 'img/foot_qq.png' %}"/><img src="{% static 'img/foot_wx.png' %}"/><img src="{% static 'img/foot_sina.png' %}"/><img src="{% static 'img/foot_f.png' %}"/></b>
+					<b>
+				<a href="http://weibo.com/5759505807/profile?topnav=1&wvr=6&is_all=1" target="_blank"><img src="{% static 'img/share/sina_white.png' %}"/></a>
+				<a href="http://t.qq.com/lotusivf" target="_blank"><img src="{% static 'img/share/tx_white.png' %}"/></a>
+				<a href="http://mp.weixin.qq.com/profile?src=3&timestamp=1464852943&ver=1&signature=nDIc3Z14boxMsL0iVrusakrBnjYbRiGcXemOagPBg4q56cQLj1kTCkcj82hPByKyTnrNtrYXLrPedLkSgcvWGA==" target="_blank"><img src="{% static 'img/share/wx_white.png' %}"/></a>
+					</b>
 					<span>中国办公地址：中国杭州世纪大道168号</span>
 				</div>
 			</div>

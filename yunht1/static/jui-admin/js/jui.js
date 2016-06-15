@@ -42,7 +42,7 @@ var Jui = (function(){
 					_obj.getList();
 				}
 			}
-		})();
+		})(),
 		jui : {
 			alert : $('#jui-alert'),
 			cover : $('#jui-cover'),

@@ -3,7 +3,6 @@ from settings import STATIC_ROOT
 
 urlpatterns = patterns('conf.views',
     url(r'^$', 'index', name='index'),
-    url(r'^index/$', 'index', name='index'),
     url(r'^success/$', 'success', name='success'),
     url(r'^success/(?P<id>\d+)$', 'success_detail', name='success_detail'),
     url(r'^news/$', 'news', name='news'),

@@ -19,7 +19,7 @@ def model(request):
     hospitalMenu = getArray2([hospitalList1,hospitalList2,hospitalList3])
     return  {
         'menuList' : [
-            {'name':'首页','href':'/index/','active':'index'},
+            {'name':'首页','href':'/','active':'index'},
             {'name':'成功案例','href':'/success/','active':'success'},
             {'name':'试管项目','href':'/project/','active':'project'},
             {'name':'试管费用','href':'/fee/','active':'fee'},

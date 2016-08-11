@@ -1,7 +1,7 @@
 #coding:utf-8
 # 前后端通信相关的配置,注释只允许使用多行方式 */
 VIEWPATH = '/upload/' #图片访问路径
-FILEPATH = '/home/jiaolj/' #图片上传路径
+FILEPATH = '/home/jiaolj/upload/' #图片上传路径
 #VIEWPATH = 'http://localhost:8016/static/upload/' #图片访问路径
 #FILEPATH = 'E:\\code\\\github\\\yunht\\\yunht1\\static\\upload\\' #图片上传路径
 #/etc/nginx/nginx.conf #修改nginx上传大小限制

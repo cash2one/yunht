@@ -29,7 +29,7 @@ LANGUAGE_CODE = 'zh-cn'
 DEFAULT_CHARSET = 'UTF-8'
 WSGI_APPLICATION = 'conf.wsgi.application'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-STATIC_ROOT = ''
+#STATIC_ROOT = ''
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',

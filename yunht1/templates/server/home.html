@@ -1,0 +1,44 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html id="html" lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="{%static 'img/icon.png'%}" rel="icon" type="image/x-icon">
+<title>{{seoTitle}}</title>
+<style>
+body {
+    margin:0;
+    position:relative;
+}
+.link {
+    display:block;
+    position:absolute;
+    /*background:#333;*/
+}
+img.bg {
+    width:100%;
+}
+</style>
+</head>
+<body>
+<img class="bg" src="{% static 'server/img/class.jpg' %}">
+<a class="link" id="link1" target="_blank" href="http://mp.weixin.qq.com/s?__biz=MzIzOTEwNzk4MQ==&mid=2653271759&idx=1&sn=f4abeae848415c9da92849e2f4a525cb#rd"></a>
+<a class="link" id="link2" target="_blank" href="http://mp.weixin.qq.com/s?__biz=MzIzOTEwNzk4MQ==&mid=2653271759&idx=2&sn=5c5fafabe6ad4a0316e6041fb719d8df#rd "></a>
+<a class="link" id="link3" target="_blank" href="http://mp.weixin.qq.com/s?__biz=MzIzOTEwNzk4MQ==&mid=2653271763&idx=3&sn=b4d385b5089415c285ffbfe0bef0c998#rd"></a>
+<script src="{% static 'js/jquery-1.12.2.js' %}"></script>
+<script>
+window.onload = function(){
+    var imw = $('img.bg')[0].clientWidth,
+        imh = $('img.bg')[0].clientHeight,
+        x = imw/843,
+        y = imh/1785
+    ;
+    $('#link1').css({height:76*y+'px',width:270*x+'px',left:238*x+'px',top:602*y+'px'});
+    $('#link2').css({height:76*y+'px',width:270*x+'px',left:118*x+'px',top:1158*y+'px'});
+    $('#link3').css({height:86*y+'px',width:86*x+'px',left:701*x+'px',top:1486*y+'px'});
+}
+</script>
+</body>
+</html>

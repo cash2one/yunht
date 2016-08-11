@@ -13,6 +13,8 @@ INSTALLED_APPS = (
 	'models',
 	'admin',
     'tools',
+    'common',
+    'apps',
 )
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',

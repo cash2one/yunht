@@ -20,6 +20,8 @@ urlpatterns = patterns('conf.views',
     url(r'^contactData/$', 'contactData', name='contactData'),
     url(r'^about/$', 'about', name='about'),
     url(r'^admin/', include('admin.urls')),
+    url(r'^server/', include('apps.server.urls')),
+    url(r'^ueditor/', include('apps.ueditor.urls')),
 )
 urlpatterns += patterns('conf.img',
     url(r'^img/(.*?)$', 'img', name='img'),   
